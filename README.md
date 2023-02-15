@@ -1,18 +1,15 @@
 # My neovim configuration
 
-## Setup
+## Installtion
 
-If you don't have a neovim config folder create one.
-Then clone the repo
+For a Automatic Installer.
+
 ```
 git clone git@github.com:eskyozar/neovim-config.git
+cd neovim-config
+chmod +x ./install.sh
+./install.sh 
 ```
-
-and move that repo into the config nvim folder.
-
-If you already have a nvim config folder.
-Overwrite the folder
-
 ## Screenshot
 
 ![image link](screenshots/screenshot%201.png)
@@ -23,6 +20,6 @@ Overwrite the folder
 
 # TODO LIST
 
-- [] Make a install script for this repo
+- [x] Make a install script for this repo
 - [] Make configuration to the neovim start screen
-- [] Make sure I will die untill i manage this repo
+- [] Make sure I will alive untill i manage this repo
