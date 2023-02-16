@@ -24,7 +24,7 @@ install_aur_helper(){
     
     (cd $HOME/.srcs/"$aurhelper"/ && makepkg -si)
     else
-    echo -e "${green}=> It looks like you have an $aurhelper installed, skipping..."
+    echo -e "${green}=> It looks like you have an $aurhelper installed, skipping...${no_color}"
     fi
 
 }
@@ -46,8 +46,8 @@ create_default_directories(){
 create_backup(){
 
     echo -e "${green}=> Createing backups of your existing configs.${no_color}"
-    [ -d "$config_directory"/lua ] && mv "$config_directory" "$config_directory"_$date && echo "nvim configs detected, backing up."]
-    [ -d "$config_directory"/init.lua ] && mv "$config_directory"/init.lua "$config_directory"_$date && echo "nvim configs detected, backing up."]
+    [ -d "$config_directory"/lua ] && mv "$config_directory" "$config_directory"_$date && echo "nvim configs detected, backing up.${no_color}"
+    [ -d "$config_directory"/init.lua ] && mv "$config_directory"/init.lua "$config_directory"_$date && echo "nvim configs detected, backing up.${no_color}"
 
 
 
@@ -62,16 +62,18 @@ copy_configs(){
 }
 
 
-echo -e "Install the desired aur helper which you want 1) yay 2) paru"
+echo -e "Install the desired aur helper which you want 1) yay 2) paru.${no_color}"
 read choice
 
 if [[ $choice -eq 1 ]] 
-then
+then	
 	aurhelper="yay"
-elif [[ $choice -eq 2]] 
+elif [[ $choice -eq 2 ]]
+then
 	aurhelper="paru"
 else 
-    echo -e "${grenn}=> Please enter a valid choice.${no_color}"
+    echo -e "${green}=> Please enter a valid choice.${no_color}"
+    exit
 fi
 
 system_update;
