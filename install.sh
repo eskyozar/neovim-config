@@ -68,8 +68,10 @@ read choice
 if [[ $choice -eq 1 ]] 
 then
 	aurhelper="yay"
-else 
+elif [[ $choice -eq 2]] 
 	aurhelper="paru"
+else 
+    echo -e "${grenn}=> Please enter a valid choice.${no_color}"
 fi
 
 system_update;
