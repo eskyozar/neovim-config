@@ -33,6 +33,7 @@ install_neovim(){
 
     echo -e "${green}=> Installing neovim.${no_color}"
     $aurhelper -Syu neovim
+    $aurhelper -Syu neovim-nvim-treesitter
 
 }
 
